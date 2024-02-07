@@ -1,0 +1,391 @@
+body {
+    background-color: #2a3d4d; /* C'est une teinte de bleu marine */
+    color: #ffffff; /* Pour que le texte soit en blanc */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Couleur de fond à ajuster */
+    color: #333; /* Couleur de texte à ajuster */
+  }
+  
+  /* Pour assurer que tous les textes qui ne sont pas explicitement stylisés soient en blanc */
+  h1, h2, p, a {
+    color: blue;
+  }
+  
+  /* Styles des liens pour les rendre blancs et ajouter un effet au survol */
+  .nav-link,
+  .auth-btn {
+    color: #ffffff;
+    /* Autres styles */
+  }
+  
+  .nav-link:hover,
+  .auth-btn:hover {
+    background-color: #1e2f3c; /* Un bleu marine légèrement plus clair pour le survol */
+    
+  }
+  
+  /* Styles des boutons pour qu'ils ressortent sur le fond bleu marine */
+  .btn {
+    background-color: #06b0ff; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Si tu veux que les boutons soient moins vifs, choisis une couleur plus douce */
+  .btn:hover {
+    background-color: #06b0ff; 
+  }
+  
+  /* Styles des sections princi9epales */
+  .main-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Styles pour les images des personnages si nécessaire */
+  .character-image {
+    border: 3px solid #ffffff; /* Ajoute une bordure blanche si les images sont sur un fond sombre */
+    /* Autres styles d'image */
+  }
+  
+  /* Footer */
+  .site-footer {
+    background-color: #1e2f3c; /* Un bleu marine légèrement plus clair que le corps pour le pied de page */
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+.site-header {
+    background-color: #202020;
+    padding: 10px 0;
+  }
+  
+  .site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo-search .site-logo {
+    width: 150px; /* Ajuster la taille du logo */
+  }
+  
+  .search-input {
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  
+  .nav-links .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+  
+  .auth-buttons .auth-btn {
+    padding: 5px 20px;
+    margin-left: 5px;
+  }
+  
+  /* Boutons et liens */
+  .btn {
+    background-color: #ff0054; /* Couleur à ajuster */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Sections principales */
+  .main-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .character-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .character-card {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Hérite la couleur du texte parent */
+    display: block;
+    text-align: center; /* Centre le texte dans la légende */
+  }
+  
+  .character-image {
+    width: 100%;
+    max-width: 200px; /* Largeur maximale de l'image */
+    display: block; /* Empêche les marges par défaut des images inline */
+    margin-bottom: 8px; /* Espace entre l'image et le texte */
+  }
+  
+  .character-name {
+    display: block; /* S'assure que le nom est sur une nouvelle ligne */
+    font-weight: bold;
+  }
+  
+
+  .ai-creation .section-title,
+  .ai-characters .section-title {
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons .filter-btn {
+    margin-right: 10px;
+  }
+  
+  .character-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espace entre les images */
+  }
+  
+  .character-image {
+    width: 100%; /* Ajuster en fonction de la taille désirée */
+    max-width: 200px; /* Ajuster en fonction de la taille désirée */
+    border-radius: 10px; /* Coins arrondis */
+  }
+  
+  /* Footer */
+  .site-footer {
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .site-nav {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      margin-top: 10px;
+    }
+  
+    .auth-buttons {
+      margin-top: 10px;
+    }
+  
+    .character-gallery {
+      flex-direction: column;
+    }
+  }
+  /* Style pour la modal/lightbox */
+.modal {
+  display: none; /* Caché par défaut */
+  position: fixed; /* Fixé au-dessus de tout */
+  z-index: 1000; /* En haut de la pile */
+  padding-top: 100px; /* Positionnement depuis le haut */
+  left: 0;
+  top: 0;
+  width: 100%; /* Pleine largeur */
+  height: 100%; /* Pleine hauteur */
+  overflow: auto; /* Ajoutez un scroll si nécessaire */
+  background-color: rgb(0,0,0); /* Fond noir */
+  background-color: rgba(0,0,0,0.9); /* Noir avec opacité */
+}
+
+/* Style pour l'image dans la modal */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Style pour le texte sous l'image (si nécessaire) */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Style pour le bouton de fermeture */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ 
+  .profile-header {
+    background-color: #333; /* Couleur de fond de l'en-tête à ajuster */
+    color: white; /* Couleur du texte de l'en-tête */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-pic {
+    width: 500px; /* Ajuste la taille selon tes besoins */
+    
+  }
+  
+  .profile-name {
+    margin: 10px 0;
+  }
+  
+  .message-section {
+    background-color: #fff; /* Couleur de fond de la section de message */
+    padding: 20px;
+    margin: 20px auto; /* Centre la section */
+  }
+  
+  .message-bubble {
+    background-color: #eee; /* Couleur de fond de la bulle */
+    border-radius: 10px; /* Coins arrondis de la bulle */
+    padding: 20px;
+    max-width: 300px; /* Largeur maximale de la bulle */
+  }
+  
+  .message-time {
+    display: block;
+    text-align: right;
+    color: #666; /* Couleur du temps du message */
+    margin-top: 10px;
+  }
+  
+  .suggestion-box {
+    margin-top: 10px;
+  }
+  
+  .message-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .message-input {
+    flex-grow: 1; /* Permet à l'input de prendre l'espace disponible */
+    margin-right: 10px;
+  }
+  
+  .send-button {
+    background-color: #ff0054; /* Couleur de fond à ajuster */
+    color: white; /* Couleur du texte à ajuster */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .profile-description {
+    background-color: #fff; /* Couleur de fond de la description */
+    padding: 20px;
+    margin: 20px auto; /* Centre la section */
+    max-width: 300px; /* Largeur maximale de la description */
+  }
+  body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4; /* Couleur de fond à ajuster */
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.profile-content {
+  background: #333; /* Couleur de fond de l'en-tête */
+  padding: 20px;
+  text-align: center; /* Centrer le contenu */
+}
+
+.profile-picture {
+  max-width: 200px; /* Ajuste ceci selon tes besoins */
+  border-radius: 10px; /* Bord arrondi pour l'image */
+  margin-bottom: 10px;
+}
+
+.profile-details {
+  color: #fff; /* Couleur du texte pour les détails */
+}
+
+.profile-name {
+  font-size: 24px; /* Taille de police pour le nom */
+  margin-bottom: 5px;
+}
+
+.profile-description {
+  font-size: 16px; /* Taille de police pour la description */
+}
+
+.message-container {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message {
+  background: pink; /* Couleur de fond pour le message */
+  padding: 15px;
+  border-radius: 10px; /* Bord arrondi pour la bulle de message */
+  margin-bottom: 20px;
+}
+
+.message-time {
+  display: block;
+  text-align: right;
+  color: #888; /* Couleur du texte pour l'heure */
+  margin-top: 10px;
+}
+
+.input-container {
+  display: flex;
+}
+
+.message-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px; /* Bord arrondi pour l'input */
+  border: 1px solid #ddd; /* Bordure pour l'input */
+  margin-right: 10px;
+}
+
+.send-button {
+  padding: 10px 20px;
+  background: #5cb85c; /* Couleur de fond pour le bouton */
+  border: none;
+  border-radius: 5px; /* Bord arrondi pour le bouton */
+  color: #fff; /* Couleur du texte pour le bouton */
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background: #4cae4c; /* Couleur de fond pour le bouton au survol */
+}

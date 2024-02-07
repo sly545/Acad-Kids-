@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lapie prof de maths</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styleslapie.css">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-left">
+      <div class="profile-header">
+        <img src="" alt="lapie" class="profile-thumbnail">
+        <button class="send-button" id="playAudioButton">
+          <img src="" alt="Lire le son" />
+        </button>
+       </div>
+      <div class="chat-box" id="chatBox">
+        <!-- Les bulles de messages apparaîtront ici -->
+      </div>
+      <div class="message-input-area">
+        <input type="text" placeholder="Type a message" id="messageInput" class="message-input">
+        <button class="send-button" id="sendButton">Envoyer</button>
+        <button class="send-button" id="sendImageButton">Demander l'image</button>
+      </div>
+      <audio id="audioPlayer" controls>
+        Votre navigateur ne supporte pas l'élément audio.
+      </audio>      
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+    
+    <div class="profile-right">
+     
+      <div class="profile-info">
+        <h2 class="profile-name-right">Lapie</h2>
+        <p class="profile-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusantium maxime beatae accusamus quisquam amet mollitia fugit pariatur. Rerum alias, quae optio inventore ipsam fuga ducimus ad nulla dignissimos esse?</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Lien vers le fichier script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
