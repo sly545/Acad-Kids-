@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="styleslapie.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container"> 
     <div class="profile-left">
       <div class="profile-header">
-        <img src="" alt="lapie" class="profile-thumbnail">
+        <img src="img/LAPIE.webp" alt="lapie" class="profile-thumbnail">
         <button class="send-button" id="playAudioButton">
-          <img src="" alt="Lire le son" />
+          <img src="img/LAPIE.webp" alt="Lire le son" />
         </button>
        </div>
       <div class="chat-box" id="chatBox">
@@ -23,10 +23,11 @@
         <input type="text" placeholder="Type a message" id="messageInput" class="message-input">
         <button class="send-button" id="sendButton">Envoyer</button>
         <button class="send-button" id="sendImageButton">Demander l'image</button>
+        <audio class="lecteur" id="audioPlayer" controls>
+          Votre navigateur ne supporte pas l'élément audio.
+        </audio>      
       </div>
-      <audio id="audioPlayer" controls>
-        Votre navigateur ne supporte pas l'élément audio.
-      </audio>      
+    
     </div>
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
@@ -35,9 +36,9 @@
     </div>
     
     <div class="profile-right">
-     
-      <div class="profile-info">
+       <div class="profile-info">
         <h2 class="profile-name-right">Lapie</h2>
+        <img src="img/LAPIE.webp" class="profile-image" alt="persone lapie" >
         <p class="profile-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusantium maxime beatae accusamus quisquam amet mollitia fugit pariatur. Rerum alias, quae optio inventore ipsam fuga ducimus ad nulla dignissimos esse?</p>
       </div>
     </div>

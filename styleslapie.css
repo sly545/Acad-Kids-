@@ -1,12 +1,11 @@
 body, html {
     margin: 0;
-    height: 100%;
     font-family: 'Arial', sans-serif;
   }
   
   .container {
     display: flex;
-    height: 100%;
+    
     background: #e9e9e9; /* Modifier selon le thème de couleur souhaité */
   }
   
@@ -20,9 +19,10 @@ body, html {
   
   
   .chat-box {
-    margin-top: 20px;
-    overflow-y: scroll; /* Ajoute le scroll vertical */
-    height: 300px; /* Ajuste la hauteur selon tes besoins */
+    padding-right: 10px;
+    overflow-y: scroll;
+    height: 267px; /* Ajoute le scroll vertical */
+ 
   }
   
   .profile-header {
@@ -78,6 +78,11 @@ body, html {
     cursor: pointer;
   }
   
+   .lecteur{
+    width: 100%;
+   }
+
+
   .profile-right {
     flex: 2;
     padding: 20px;
@@ -85,39 +90,34 @@ body, html {
   }
   
   .profile-image {
-    height: 440px;
+    width: 50%;
     border-radius: 10px;
+    object-fit: cover;
+    display: flex;
   }
   
   .profile-info {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     background:grey; /* Fond clair pour la bio */
-    padding: 20px;
     border-radius: 10px;
-    height: 185px;
+    align-items: center;
   }
   .profile-name-rightT{
     color: #333;
 
   }
-  .profile-name-right, .profile-description {
-    margin-top: 0px;
+  .message-user{
+    color: blueviolet;
   }
-  .profile-description {
-    /* padding: 27px; */
+  .profile-description {  
     display: flex;
     color: black;
     font-size: 14px;
-    height: 48px;
-    /* margin-top: 0px; */
+
 }
 /* ... Autres styles ... */
-
-.chat-box {
-    margin-top: 20px;
-  }
-  
   .message-bubble {
     background-color: #ececec;
     border-radius: 15px;

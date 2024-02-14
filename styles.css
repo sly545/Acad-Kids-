@@ -350,12 +350,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
+  
 .message {
-  background: pink; /* Couleur de fond pour le message */
-  padding: 15px;
-  border-radius: 10px; /* Bord arrondi pour la bulle de message */
-  margin-bottom: 20px;
+  font-size: 15px;
+  padding: 5px;
+  background: pink;
+  border-radius: 10px;
+  margin: 6px;
 }
 
 .message-time {
