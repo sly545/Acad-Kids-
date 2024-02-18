@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (messageText) {
             displayMessage(messageText, 'user'); // Affiche le message de l'utilisateur dans la boîte de chat
             sendMessageToServer(messageText); // Envoie le message au serveur
-            messageInput.value = ''; // Efface le champ de saisie
+    
         }
         console.log(messageText);
     });
@@ -46,18 +46,23 @@ document.addEventListener('DOMContentLoaded', function() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ text: "lastMessage" }) // Envoie le texte au serveur pour synthétiser le discours ps j'ai mis des guillemet pour pas que sa ùme crame mes carcther pour l'api
+            // Assurez-vous de supprimer les guillemets autour de lastMessage pour envoyer la variable et non la chaîne "lastMessage"
+            body: JSON.stringify({ text: "lastMessage" }) 
         })
         .then(response => response.json())
         .then(data => {
-            audioPlayer.src = data.audioUrl; // Définit la source du lecteur audio avec l'URL retournée par le serveur
-            audioPlayer.play(); // Joue le fichier audio
+            if(data.audioUrl) {
+                // Ouvre l'URL du fichier audio dans un nouvel onglet
+                window.open(data.audioUrl, '_blank');
+            } else {
+                console.error('Aucune URL audio reçue ou il y a eu une erreur côté serveur');
+            }
         })
         .catch(error => {
             console.error('Error:', error);
         });
     });
-
+    
     // Fonction pour afficher les messages dans la boîte de chat
     function displayMessage(message, sender) {
         const messageDiv = document.createElement('div');

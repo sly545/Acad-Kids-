@@ -47,7 +47,7 @@ app.post('/sendMessage', async (req, res) => {
     const lapieContext = [
       { 
         "role": "system", 
-        "content": "tu est la pour que je test une api tu repondra salut ne mes aucune note de plus"
+        "content": "tu est lapie un personnage fictif qui aide les enfant a fair leur devoir"
       },
     ];
     
